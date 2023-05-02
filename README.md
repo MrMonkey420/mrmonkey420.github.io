@@ -51,7 +51,7 @@ Super Mario Bros. is an iconic platforming game that employs both methods to imp
 
 **The Binding of Isaac**
 
-The Binding of Isaac is a rogue-like game that in some situations has plenty of enemies and bullets moving arround at the same time in the same space. It is a more recent game, but that doesn't mean it uses some of this methods, specially sprite sorting. 
+The Binding of Isaac is a rogue-like game that in some situations has plenty of enemies and bullets moving arround at the same time in the same space. It is a more recent game, but that does not mean it don't uses some of this methods, specially sprite sorting. 
 
 **Donkey Kong Country**
 
