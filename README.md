@@ -36,7 +36,7 @@ Sprite Sorting is commonly used in games with many on-screen sprites, such as pl
 
 Camera Culling is another optimization technique used in 2D games to improve game performance. In a 2D game, the camera acts as the player's viewpoint and determines which objects and characters are displayed on the screen.
 
-Camera Culling reduces the number of objects and characters that need to be drawn on the screen. The technique divides the screen into sections and calculates which objects and characters are within the current camera section. Only the objects and characters within the current section are drawn, reducing the GPU load and increasing rendering speed.
+Camera Culling reduces the number of objects and characters that need to be drawn on the screen. The technique takes the screen bounds and calculates which objects and characters are inside of it. Only the objects and characters inside of the camera bounds are drawn, reducing the GPU load and increasing rendering speed.
 
 Camera Culling is typically used in games where the camera is constantly moving, such as adventure games and platformers. By implementing this method, developers can ensure that the game's performance is not affected by the number of objects and characters displayed on the screen.
 
