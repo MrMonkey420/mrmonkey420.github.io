@@ -38,7 +38,7 @@ Camera Culling is another optimization technique used in 2D games to improve gam
 
 Camera Culling reduces the number of objects and characters that need to be drawn on the screen. The technique divides the screen into sections and calculates which objects and characters are within the current camera section. Only the objects and characters within the current section are drawn, reducing the GPU load and increasing rendering speed.
 
-Camera Culling is typically used in games where the camera is constantly moving, such as adventure games and platformers. By implementing Camera Culling, developers can ensure that the game's performance is not affected by the number of objects and characters displayed on the screen.
+Camera Culling is typically used in games where the camera is constantly moving, such as adventure games and platformers. By implementing this method, developers can ensure that the game's performance is not affected by the number of objects and characters displayed on the screen.
 
 ![image](https://user-images.githubusercontent.com/99950510/235759293-e6274fff-7ff1-4970-bcfa-39caa40761b2.png)
 
