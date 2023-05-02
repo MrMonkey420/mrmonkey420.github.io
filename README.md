@@ -12,6 +12,14 @@ Hi, my name is Marc Escandell and this is an introduction to Sprite Sorting and 
 
 To address this issue, optimization methods such as Sprite Sorting and Camera Culling have been developed to allow game developers to improve performance and enhance the user experience.
 
+### A bit of context to both methods
+
+The use of Sprite Sorting and Camera Culling methods in 2D games dates back to the early days of video games, when technology wasn't so powerfull and game developers had to invent some tricks like these in order to the game to work properly. Game developers have employed these techniques for decades to improve game performance and ensure a smooth gaming experience.
+
+As technology has advanced, so have these methods. Game developers have created more sophisticated algorithms to determine which objects and characters should be rendered at any given time. Additionally, optimization techniques have also been applied to 3D games to enhance performance on complex screens.
+
+In summary, Sprite Sorting and Camera Culling are essential techniques that have been utilized in 2D games for decades. As technology has progressed, these methods have evolved, enabling game developers to create more sophisticated and seamless gaming experiences.
+
 ### ¿What does these methods do?
 
 **Sprite Sorting:**
@@ -22,21 +30,13 @@ In simple terms, Sprite Sorting arranges the sprites based on their position on 
 
 Sprite Sorting is commonly used in games with many on-screen sprites, such as platformers and fighting games, where there are numerous constantly moving characters and objects. By applying Sprite Sorting, developers can enhance game performance and ensure players enjoy a smooth and uninterrupted gaming experience.
 
-**Camera Culling**
+**Camera Culling:**
 
 Camera Culling is another optimization technique used in 2D games to improve game performance. In a 2D game, the camera acts as the player's viewpoint and determines which objects and characters are displayed on the screen.
 
 Camera Culling reduces the number of objects and characters that need to be drawn on the screen. The technique divides the screen into sections and calculates which objects and characters are within the current camera section. Only the objects and characters within the current section are drawn, reducing the GPU load and increasing rendering speed.
 
 Camera Culling is typically used in games where the camera is constantly moving, such as adventure games and platformers. By implementing Camera Culling, developers can ensure that the game's performance is not affected by the number of objects and characters displayed on the screen.
-
-### A bit of context to both methods
-
-The use of Sprite Sorting and Camera Culling methods in 2D games dates back to the early days of video games, when technology wasn't so powerfull and game developers had to invent some tricks like these in order to the game to work properly. Game developers have employed these techniques for decades to improve game performance and ensure a smooth gaming experience.
-
-As technology has advanced, so have these methods. Game developers have created more sophisticated algorithms to determine which objects and characters should be rendered at any given time. Additionally, optimization techniques have also been applied to 3D games to enhance performance on complex screens.
-
-In summary, Sprite Sorting and Camera Culling are essential techniques that have been utilized in 2D games for decades. As technology has progressed, these methods have evolved, enabling game developers to create more sophisticated and seamless gaming experiences.
 
 ### Examples of games that use Sprite Sorting and Camera Culling
 
@@ -67,3 +67,27 @@ In order, these are the steps we must follow:
 3. Sort the list of sprites based on their depth, so that sprites with a greater depth are drawn after sprites with a lesser depth.
 
 4. Draw the sprites in the order they appear in the list. This ensures that the deepest sprites are drawn behind the sprites closest to the player.
+
+**Pivot point:** 
+
+There are other ways to sort sprites, and depending on the situation one would be better than others. 
+
+If one entity wants to move around of a column, for example, their Z-order is in constant change and our code should solve it. Here is one more way to do it:
+
+We can use what its called a pivot point: a point situated in the spot where the entity is supposed to touch the ground (at the same height than their feet) that we can use to compare better dynamic entities. We will compare their Y-axis because, in general in 2D games, the more upwards an entity is situated, further away from the player in Z-axis it is.
+
+I made some code that could help you understand it more [here](https://github.com/MrMonkey420/mrmonkey420.github.io)
+
+### Camera Culling
+
+In essence, what we are gona do is set the camera bounds and detect if any entity is inside of it. Also we can call the camera bounds “frustum”.
+
+1. Determine the camera's view frustum: In a 2D game, the camera's view frustum is essentially a rectangle that represents the portion of the game world that's visible    on the screen. You can calculate the view frustum by using the camera's position and size, as well as the screen size.
+
+2. Cull objects outside the frustum: Once you have the view frustum, you can test each object in the scene to see if it's within the frustum. You can do this by          testing the object's bounding box or bounding circle against the frustum. If the object is outside the frustum, you don't need to render it.
+
+3. Render visible objects: Once you've culled objects outside the view frustum, you can then render the visible objects.
+
+There are more ways to implement this idea, like fractionary culling, but we are gonna focus in the standard one.
+
+To see some code about Camera Culling visit [this page](https://github.com/MrMonkey420/mrmonkey420.github.io)
