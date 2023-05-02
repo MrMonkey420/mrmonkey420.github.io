@@ -111,3 +111,4 @@ If you want, check these websites and videos that helped me understand better th
 **Camera Culling:**
 
 - [Advanced C++/Graphics Tutorial 31: Camera Culling 2D! - MakingGamesWithBen (YouTube)](https://www.youtube.com/watch?v=zCaurIC49I4)
+- [Culling in 2D for people in a hurry - Scott Foster](https://www.linkedin.com/pulse/culling-2d-people-hurry-scott-foster)
