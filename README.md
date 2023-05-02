@@ -80,7 +80,7 @@ I made some code that could help you understand it more [here](https://github.co
 
 ### Camera Culling
 
-In essence, what we are gona do is set the camera bounds and detect if any entity is inside of it. Also we can call the camera bounds “frustum”.
+In essence, what we are gona do is set the camera bounds and detect if any entity is inside of it. If an entity that exists in the virtual world is not situated in the camera bounds, also called “frustum”, it wont render and will free some memory to better optimization.
 
 1. Determine the camera's view frustum: In a 2D game, the camera's view frustum is essentially a rectangle that represents the portion of the game world that's visible    on the screen. You can calculate the view frustum by using the camera's position and size, as well as the screen size.
 
@@ -91,3 +91,18 @@ In essence, what we are gona do is set the camera bounds and detect if any entit
 There are more ways to implement this idea, like fractionary culling, but we are gonna focus in the standard one.
 
 To see some code about Camera Culling visit [this page](https://github.com/MrMonkey420/mrmonkey420.github.io)
+
+
+### Bibliography
+
+If you want, check these websites and videos that helped me understand better these methods:
+
+**Sprite Sorting:**
+
+- [Advanced Sprite Sorting tutorial - Scott Steffes (YouTube)](https://www.youtube.com/watch?v=yRZlVrinw9I)
+- [A discourse made by the libsd community about sprite arrays](https://discourse.libsdl.org/t/z-order/16357/11)
+- [A github website made by ShaunLebron explaining how does Sprite Sorting work on isometric environments](https://shaunlebron.github.io/IsometricBlocks/)
+
+**Camera Culling:**
+
+- [Advanced C++/Graphics Tutorial 31: Camera Culling 2D! - MakingGamesWithBen (YouTube)](https://www.youtube.com/watch?v=zCaurIC49I4)
